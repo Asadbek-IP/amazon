@@ -13,8 +13,6 @@ class _HomePageState extends State<HomePage> {
     "assets/images/apple2.jpg",
     "assets/images/apple2.jpg",
     "assets/images/apple2.jpg",
-    "assets/images/apple2.jpg",
-    "assets/images/apple2.jpg",
   ];
   @override
   Widget build(BuildContext context) {
@@ -106,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                   width: double.infinity,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: const [
                       Padding(
                         padding: EdgeInsets.all(16.0),
@@ -121,15 +119,15 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Positioned(
                   bottom: 0,
-                  right: 0,
+                  left: 0,
                   top: 0,
                   child: Container(
                     width: 200,
                     decoration: const BoxDecoration(
                         color: Color(0xFF30BFDA),
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(70),
-                            bottomLeft: Radius.circular(70))),
+                            topRight: Radius.circular(70),
+                            bottomRight: Radius.circular(70))),
                     child: const Image(
                         image: AssetImage("assets/images/carremove.png")),
                   ),
@@ -215,7 +213,6 @@ class _HomePageState extends State<HomePage> {
               height: 10,
             ),
             Container(
-              
               padding: const EdgeInsets.all(10),
               width: double.infinity,
               color: Colors.white,
@@ -247,6 +244,52 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    color: Colors.white,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Top products in Camera",
+                            style: TextStyle(fontSize: 22),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Image(
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                              height: 200,
+                              image: AssetImage("assets/images/apple2.jpg")),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: const [
+                              Expanded(
+                                child: Image(
+                                    fit: BoxFit.cover,
+                                    height: 180,
+                                    image:
+                                        AssetImage("assets/images/apple2.jpg")),
+                              ),
+                              SizedBox(width: 10,),
+                              Expanded(
+                                child: Image(
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                    height: 180,
+                                    image:
+                                        AssetImage("assets/images/apple2.jpg")),
+                              ),
+                            ],
+                          )
+                        ]),
+                  )
                 ],
               ),
             )
